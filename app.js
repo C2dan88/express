@@ -23,6 +23,12 @@ app.get('/hello.txt', function(req, res) {
 	res.setHeader('Content-Type', 'text/plain');
 	res.setHeader('Content-Length', body.length);
 	res.end(body);
+
+	/* NOTE: The above could be simply written as
+	 *
+	 * res.send('Hello World!!!');
+	 *
+	 * */
 });
 
 app.listen(3000);
